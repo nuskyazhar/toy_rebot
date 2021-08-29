@@ -7,4 +7,5 @@ public enum Action {
     MOVE,
     REPORT,
     EXIT
+    // probably a good idea to add a help command as well
 }
