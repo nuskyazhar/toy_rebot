@@ -20,10 +20,10 @@ public class BotAppTest {
     private static Stream<Arguments> inputSequenceAndExpectedOutput() {
         // make sure expected output has the line break at the end because we are using println to print
         return Stream.of(
-                Arguments.of("report\nright\nreport\nexit", "first command should be a valid PLACE\n"),
+                Arguments.of("report\nright\nreport\nexit", "first command should be a valid PLACE. i.e: PLACE 3,4,WEST\n"),
                 Arguments.of("place 3,4,west\nright\nreport\nexit", "3,4,NORTH\n"),
                 Arguments.of("place 3,4,west\nright\nright\nright\nright\nreport\nexit", "3,4,WEST\n"),
-                Arguments.of("place 3     ,4,west\nright\nreport\nexit", "first command should be a valid PLACE\n")
+                Arguments.of("place 3     ,4,west\nright\nreport\nexit", "first command should be a valid PLACE. i.e: PLACE 3,4,WEST\n")
         );
     }
 

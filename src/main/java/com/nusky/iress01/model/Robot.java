@@ -73,7 +73,7 @@ public class Robot {
 
     public void walk(Command command) {
         if (this.isFirstAction() && (PLACE != command.getAction() || table.isNotValidPosition(command.getPoint()))) {
-            System.out.println("first command should be a valid PLACE");
+            System.out.println("first command should be a valid PLACE. i.e: PLACE 3,4,WEST");
             return;
         }
 

@@ -14,6 +14,7 @@ public class BotApp {
     public static void main(String[] args) {
         System.out.println("Stared the toy robot up. Start giving commands...");
 
+        //if needed, can take the width/length as command line params
         SquareTable table = SquareTable.builder().length(5).width(5).build();
         Robot robot = Robot.builder().table(table).build();
 
