@@ -2,7 +2,7 @@
 
 **How do I behave**
 
- - I have 5 by 5 square table
+ - I have a 5 by 5 square table
  - I support below commands
 	 - **PLACE X,Y,DIRECTION** 
 		 - X,Y should be valid coordinates on the table
