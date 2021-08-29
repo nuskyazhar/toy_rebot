@@ -1,7 +1,6 @@
 package com.nusky.iress01;
 
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -33,11 +32,6 @@ public class BotAppTest {
         outputStream = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outputStream);
         System.setOut(printStream); //overriding the standard output to be able to assert the output printed to the console
-    }
-
-    @AfterEach
-    public void destroy() {
-        outputStream = null;
     }
 
     @ParameterizedTest
