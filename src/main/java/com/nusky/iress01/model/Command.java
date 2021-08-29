@@ -5,8 +5,7 @@ import com.nusky.iress01.exception.BotException;
 import com.nusky.iress01.model.enums.Action;
 import com.nusky.iress01.model.enums.Direction;
 import lombok.Builder;
-import lombok.Data;
-import lombok.extern.java.Log;
+import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.regex.Pattern;
@@ -14,14 +13,14 @@ import java.util.regex.Pattern;
 import static com.nusky.iress01.exception.BotError.INVALID_COMMAND;
 import static com.nusky.iress01.model.enums.Action.*;
 
-@Data
+@Getter
 @Builder
 public class Command {
     private static final Pattern COMMAND_PATTERN = Pattern.compile("^((PLACE\\s+\\d+,\\d+,(NORTH|SOUTH|EAST|WEST))|LEFT|RIGHT|MOVE|REPORT|EXIT)$");
 
-    private Action action;
-    private Point point;
-    private Direction direction;
+    private final Action action;
+    private final Point point;
+    private final Direction direction;
 
     /**
      * @param command a command to validate

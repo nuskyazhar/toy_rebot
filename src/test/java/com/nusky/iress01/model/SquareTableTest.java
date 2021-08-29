@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SquareTableTest {
 
-    Table table = SquareTable.builder().length(5).width(5).build();
+    SquareTable table = SquareTable.builder().length(5).width(5).build();
 
     @ParameterizedTest
     @CsvSource(value = {
